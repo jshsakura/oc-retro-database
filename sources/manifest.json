@@ -28,7 +28,7 @@
       "revision": "b38982b31f98b51ca37da800497cac08afec7dd3",
       "observedAt": "2017-04-20",
       "license": "no explicit license file; Tentacle-derived work, attribution preserved",
-      "scope": "2017 Korean display labels and filename observations; arcade set names under a separate namespace; five byte-identical arcade-family folders deduplicated",
+      "scope": "Korean display labels and filename observations; arcade set names under a separate namespace; five byte-identical arcade-family folders deduplicated",
       "inputRows": 23099,
       "importedRows": 19373,
       "newIdentities": 1078,

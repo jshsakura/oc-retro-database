@@ -5,7 +5,7 @@
 | Curator-provided Game-and-What / CookingFoil corpus | Korean/Latin naming observations, existing hashes, saved patch facts | Names, aliases and identification facts; no operating inventories |
 | Kkul naming lists (꿀렁리스트) | Curator reports permission obtained from the author | Naming observations already incorporated in the curator corpus |
 | Tentacle Team, romlistkr | Korean display labels and ROM filename aliases | Title/path observations from the pinned XML commit, MIT licensed |
-| sana2dang ES-KoreanLanguage-List | 2017 Tentacle-derived Korean display labels (AttractMode-era full lists) | Names and filename aliases from the pinned 2017 commit; no explicit license file, Tentacle attribution preserved |
+| sana2dang ES-KoreanLanguage-List | Tentacle-derived Korean display labels (AttractMode-era full lists) | Names and filename aliases from the pinned commit; no explicit license file, Tentacle attribution preserved |
 | FBNeo set table used by CookingFoil | Arcade short-name and parent namespace | Set names, descriptions, parent relation and curated display labels |
 | LaunchBox cache | Metadata identity crosswalk | Existing IDs and link status; no descriptions or media payloads |
 | ScreenScraper IDs recorded in source XML | Explicit source crosswalk | Recorded IDs only; no API access or credentials |
@@ -18,7 +18,7 @@ Required Tentacle attribution: Tentacle Team, https://cafe.naver.com/raspigamer
 The Tentacle source license is preserved in `licenses/tentacle-romlistkr-MIT.txt`.
 Its display-name translation must not be interpreted as a Korean translation patch.
 
-The sana2dang ES-KoreanLanguage-List snapshot is a 2017 Tentacle-derived list. Its labels are stored as
+The sana2dang ES-KoreanLanguage-List snapshot is a Tentacle-derived list. Its labels are stored as
 alternate observations with provenance; they never override the 2024 Tentacle titles, and its arcade set
 names stay in their own namespace. The repository carries no explicit license file, so the Tentacle Team
 attribution from its README is preserved here.
