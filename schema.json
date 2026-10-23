@@ -31,6 +31,9 @@
       "version": { "type": ["string", "null"] }, "date": { "type": ["string", "null"] }
     }} },
     "fingerprints": { "type": "array", "items": { "type": "object", "required": ["algorithm", "value", "scope", "source"] } },
+    "descriptions": { "type": "array", "items": { "type": "object", "required": ["text", "language", "source"], "properties": {
+      "text": { "type": "string" }, "language": { "type": "string" }, "source": { "type": "string" }
+    }} },
     "links": { "type": "array", "items": { "type": "object", "required": ["provider", "id", "status"] } },
     "sources": { "type": "array", "items": { "type": "string" } }
   }

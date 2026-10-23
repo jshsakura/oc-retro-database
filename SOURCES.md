@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | Curator-provided Game-and-What / CookingFoil corpus | Korean/Latin naming observations, existing hashes, saved patch facts | Names, aliases and identification facts; no operating inventories |
 | Kkul naming lists (꿀렁리스트) | Curator reports permission obtained from the author | Naming observations already incorporated in the curator corpus |
-| Tentacle Team, romlistkr | Korean display labels and ROM filename aliases | Title/path observations from the pinned XML commit, MIT licensed |
+| Tentacle Team, romlistkr | Korean display labels, ROM filename aliases and arcade Korean descriptions | Title/path/description observations from the pinned XML commit, MIT licensed |
 | sana2dang ES-KoreanLanguage-List | Tentacle-derived Korean display labels (AttractMode-era full lists) | Names and filename aliases from the pinned commit; no explicit license file, Tentacle attribution preserved |
 | FBNeo set table used by CookingFoil | Arcade short-name and parent namespace | Set names, descriptions, parent relation and curated display labels |
 | LaunchBox cache | Metadata identity crosswalk | Existing IDs and link status; no descriptions or media payloads |

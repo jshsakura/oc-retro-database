@@ -18,7 +18,7 @@
       "revision": "d4eeffda1a5d609ef1858d2ef4b03258ab7ec9b7",
       "license": "MIT",
       "attribution": "Tentacle Team, https://cafe.naver.com/raspigamer",
-      "scope": "display names and filename aliases",
+      "scope": "display names, filename aliases and arcade Korean descriptions",
       "inputRows": 73851,
       "importedRows": 73850
     },
