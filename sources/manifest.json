@@ -44,8 +44,9 @@
     {
       "id": "kkul",
       "label": "꿀렁리스트",
+      "attribution": "꿀렁이, 무풍카페",
       "scope": "naming observations within legacy-corpus",
-      "permission": "Curator reports direct permission obtained from the author"
+      "permission": "Direct permission obtained from the author on 2026-10-23"
     }
   ]
 }
