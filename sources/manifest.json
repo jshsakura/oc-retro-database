@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "sources": [
+    {
+      "id": "libretro-database",
+      "url": "https://github.com/libretro/libretro-database",
+      "revision": "12c21cf79f1e20eff6ac68b80875816c717d0a7a",
+      "license": "CC-BY-SA-4.0",
+      "dataset": "datasets/libretro-crosswalk.jsonl",
+      "scope": "No-Intro/Redump release names, serials, DAT fingerprints and image lookup keys",
+      "sourceFiles": 31,
+      "matchedReleases": 20070,
+      "candidateLinks": 31363
+    },
+    {
+      "id": "tentacle-romlistkr",
+      "url": "https://github.com/tentacleteam/romlistkr",
+      "revision": "d4eeffda1a5d609ef1858d2ef4b03258ab7ec9b7",
+      "license": "MIT",
+      "attribution": "Tentacle Team, https://cafe.naver.com/raspigamer",
+      "scope": "display names and filename aliases",
+      "inputRows": 73851,
+      "importedRows": 73850
+    },
+    {
+      "id": "legacy-corpus",
+      "scope": "curator-provided Game-and-What and CookingFoil naming observations",
+      "inputNameObservations": 41306,
+      "includes": ["existing names", "aliases", "hash observations", "recorded patch facts", "provider ID crosswalks"],
+      "excludes": ["library paths", "inventories", "sessions", "accounts", "credentials", "media payloads", "ROM payloads"]
+    },
+    {
+      "id": "kkul",
+      "scope": "naming observations within legacy-corpus",
+      "permission": "Curator reports direct permission obtained from the author"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+node_modules/
+/node_modules
+artifacts/
+data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.zip
+*.7z
+*.pyc
+__pycache__/
+.env

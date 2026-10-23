@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jshsakura/oc-retro-database/schema.json",
+  "title": "OC Retro Database identity",
+  "type": "object",
+  "required": ["id", "system", "titles", "originalTitle", "kind", "sources"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "system": { "type": "string", "minLength": 1 },
+    "titles": {
+      "type": "object",
+      "properties": { "ko": { "type": ["string", "null"] }, "en": { "type": ["string", "null"] }, "ja": { "type": ["string", "null"] } }
+    },
+    "originalTitle": {
+      "type": ["object", "null"],
+      "required": ["text", "language", "source"],
+      "properties": { "text": { "type": "string" }, "language": { "type": "string" }, "source": { "type": "string" } }
+    },
+    "romanizations": { "type": "array", "items": { "type": "object", "required": ["text", "source"] } },
+    "kind": { "enum": ["unknown", "official", "translation", "romhack", "homebrew", "bootleg", "prototype", "bios"] },
+    "baseGameId": { "type": ["string", "null"] },
+    "aliases": {
+      "type": "array",
+      "items": { "anyOf": [{ "type": "string" }, { "type": "object", "required": ["name", "kind", "source"], "properties": {
+        "name": { "type": "string" }, "kind": { "type": "string" }, "source": { "type": "string" }, "language": { "type": ["string", "null"] }
+      }}] }
+    },
+    "projects": { "type": "array", "items": { "type": "object", "required": ["id", "kind"] } },
+    "releases": { "type": "array", "items": { "type": "object", "properties": {
+      "id": { "type": "string" }, "projectId": { "type": ["string", "null"] }, "kind": { "type": "string" },
+      "version": { "type": ["string", "null"] }, "date": { "type": ["string", "null"] }
+    }} },
+    "fingerprints": { "type": "array", "items": { "type": "object", "required": ["algorithm", "value", "scope", "source"] } },
+    "links": { "type": "array", "items": { "type": "object", "required": ["provider", "id", "status"] } },
+    "sources": { "type": "array", "items": { "type": "string" } }
+  }
+}

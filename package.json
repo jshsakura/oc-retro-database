@@ -1,0 +1,14 @@
+{
+  "name": "oc-retro-database",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Korean retro game identities, source observations and deterministic metadata links",
+  "engines": { "node": ">=22.13" },
+  "exports": { ".": "./src/resolver.mjs", "./sqlite": "./src/sqlite.mjs" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:unit": "node --test test/*.test.mjs",
+    "lint": "node tools/lint.mjs"
+  }
+}
