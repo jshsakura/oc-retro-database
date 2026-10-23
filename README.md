@@ -19,7 +19,8 @@ observations. A mod can refer to a `baseGameId`; inherited base-game metadata ne
 the mod itself. Arcade short sets retain their namespace as well as their short name.
 
 The initial corpus combines curator-provided naming observations with Tentacle Team's XML
-title lists. The upstream commit, attribution and source status are recorded in `sources/`.
+title lists and the 2017 sana2dang ES-KoreanLanguage-List snapshot. The upstream commit,
+attribution and source status are recorded in `sources/`.
 No ROM payloads, media, API credentials, user/session records or library inventories are included.
 
 ## Build and resolve

@@ -23,6 +23,18 @@
       "importedRows": 73850
     },
     {
+      "id": "sana2dang-es-koreanlanguage-list",
+      "url": "https://github.com/sana2dang/ES-KoreanLanguage-List",
+      "revision": "b38982b31f98b51ca37da800497cac08afec7dd3",
+      "observedAt": "2017-04-20",
+      "license": "no explicit license file; Tentacle-derived work, attribution preserved",
+      "scope": "2017 Korean display labels and filename observations; arcade set names under a separate namespace; five byte-identical arcade-family folders deduplicated",
+      "inputRows": 23099,
+      "importedRows": 19373,
+      "newIdentities": 1078,
+      "mergedRows": 18295
+    },
+    {
       "id": "legacy-corpus",
       "scope": "curator-provided Game-and-What and CookingFoil naming observations",
       "inputNameObservations": 41306,
@@ -31,6 +43,7 @@
     },
     {
       "id": "kkul",
+      "label": "꿀렁리스트",
       "scope": "naming observations within legacy-corpus",
       "permission": "Curator reports direct permission obtained from the author"
     }
