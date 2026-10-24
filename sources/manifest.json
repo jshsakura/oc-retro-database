@@ -44,9 +44,14 @@
     {
       "id": "kkul",
       "label": "꿀렁리스트",
-      "attribution": "꿀렁이, 무풍카페",
-      "scope": "naming observations within legacy-corpus",
-      "permission": "Direct permission obtained from the author on 2026-10-23"
+      "attribution": "꿀렁이, 무풍카페 (https://cafe.naver.com/moopung)",
+      "scope": "Korean display names, filename aliases and Korean descriptions from the dated per-system gamelist packs; media payloads excluded",
+      "permission": "Direct permission obtained from the author on 2026-10-23",
+      "distribution": "dated zips 241121 through 260829, 27 systems",
+      "inputRows": 3571,
+      "newIdentities": 1319,
+      "mergedRows": 2252,
+      "descriptions": 3090
     }
   ]
 }
