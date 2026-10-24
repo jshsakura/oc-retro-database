@@ -82,18 +82,13 @@ is an image lookup key, not evidence that an image exists.
 `openResolver()` opens SQLite read-only and reloads after file replacement or an external commit,
 including WAL commits. `snapshot()` explicitly freezes one resolver for a consistent batch.
 
-## CookingFoil compatibility
+## Export
 
-The export command writes CookingFoil's existing `{ systems, titles, folders }` Korean-name
-dictionary format. It excludes ambiguous title/hash labels, filename-only observations and
-known ROM hacks/homebrew/bootlegs from base-title guesses. It never renames or patches ROMs.
-Arcade short sets use the separate set namespace rather than this Korean-title export.
-
-CookingFoil can display `Korean (English) [existing patch tags]` from the separate fields. Tags
-are observations of a file/release, not part of the canonical title. Use provider links to fetch
-metadata by ID; retain their status (`title-unique`, `source-linked`, `verified`, `ambiguous`)
-instead of upgrading a title guess into a verified link. The server adapter is maintained in
-the CookingFoil repository.
+`tools/export-cookingfoil.mjs` writes a Korean-name dictionary (`{ systems, titles, folders }`)
+for frontend consumers. Ambiguous title/hash labels, filename-only observations and known ROM
+hacks, homebrew and bootlegs are excluded from base-title guesses; arcade short sets use their
+own namespace instead of this export. How a consumer displays or integrates the dictionary is
+documented in that consumer's repository (CookingFoil maintains its own server adapter).
 
 ## Development
 
