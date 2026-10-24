@@ -17,6 +17,20 @@ test("the published corpus keeps titles separate and contains no library or acco
   assert.ok(ids.size > 0);
 });
 
+test("every description sidecar entry points to a known identity", () => {
+  const ids = new Set(fs.readFileSync(new URL("../datasets/identities.jsonl", import.meta.url), "utf8").trim().split("\n").map((line) => JSON.parse(line).id));
+  const lines = fs.readFileSync(new URL("../datasets/descriptions.jsonl", import.meta.url), "utf8").trim().split("\n");
+  for (const line of lines) {
+    const row = JSON.parse(line);
+    assert.ok(ids.has(row.id));
+    assert.ok(Array.isArray(row.descriptions) && row.descriptions.length > 0);
+    for (const d of row.descriptions) {
+      assert.ok(d.text && d.language && d.source);
+    }
+  }
+  assert.ok(lines.length > 4000);
+});
+
 test("every libretro crosswalk points to a known identity and records its uncertainty", () => {
   const rows = fs.readFileSync(new URL("../datasets/identities.jsonl", import.meta.url), "utf8").trim().split("\n").map((line) => JSON.parse(line));
   const ids = new Set(rows.map((r) => r.id));

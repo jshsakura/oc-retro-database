@@ -3,7 +3,7 @@
 | Source | Role | Included material |
 | --- | --- | --- |
 | Curator-provided Game-and-What / CookingFoil corpus | Korean/Latin naming observations, existing hashes, saved patch facts | Names, aliases and identification facts; no operating inventories |
-| 꿀렁리스트 (무풍카페, 꿀렁이) | Direct permission obtained from the author on 2026-10-23 | Korean names and descriptions from the dated gamelist packs (3,090 descriptions); media excluded |
+| 꿀렁리스트 (무풍카페, 꿀렁이) | Permission 2026-10-23, scope confirmed 2026-10-24: full text approved for this open-source database; the author's photos and videos are excluded | Korean names and descriptions from the dated gamelist packs (3,090 descriptions); media excluded |
 | Tentacle Team, romlistkr | Korean display labels, ROM filename aliases and arcade Korean descriptions | Title/path/description observations from the pinned XML commit, MIT licensed |
 | sana2dang ES-KoreanLanguage-List | Tentacle-derived Korean display labels (AttractMode-era full lists) | Names and filename aliases from the pinned commit; no explicit license file, Tentacle attribution preserved |
 | FBNeo set table used by CookingFoil | Arcade short-name and parent namespace | Set names, descriptions, parent relation and curated display labels |
@@ -22,6 +22,13 @@ The sana2dang ES-KoreanLanguage-List snapshot is a Tentacle-derived list. Its la
 alternate observations with provenance; they never override the 2024 Tentacle titles, and its arcade set
 names stay in their own namespace. The repository carries no explicit license file, so the Tentacle Team
 attribution from its README is preserved here.
+
+The kkulleong list (꿀렁리스트) is distributed by its author (꿀렁이) through Mupung Cafe
+(https://cafe.naver.com/moopung) as dated per-system packs. The author granted direct permission on
+2026-10-23 and confirmed the scope on 2026-10-24: the text (names and Korean descriptions) may be
+published in this open-source database, while the author's photos and videos are excluded and no media
+payloads are copied. Its descriptions are the author's own curation; a Korean display label or
+description never implies a translated ROM, a patch version or an emulator requirement.
 
 libretro upstream: https://github.com/libretro/libretro-database
 

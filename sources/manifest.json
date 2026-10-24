@@ -19,6 +19,7 @@
       "license": "MIT",
       "attribution": "Tentacle Team, https://cafe.naver.com/raspigamer",
       "scope": "display names, filename aliases and arcade Korean descriptions",
+      "descriptions": 1613,
       "inputRows": 73851,
       "importedRows": 73850
     },
@@ -46,7 +47,7 @@
       "label": "꿀렁리스트",
       "attribution": "꿀렁이, 무풍카페 (https://cafe.naver.com/moopung)",
       "scope": "Korean display names, filename aliases and Korean descriptions from the dated per-system gamelist packs; media payloads excluded",
-      "permission": "Direct permission obtained from the author on 2026-10-23",
+      "permission": "Direct permission obtained from the author on 2026-10-23; scope confirmed 2026-10-24: full text (names, descriptions) approved for this open-source database, the author's photos and videos excluded",
       "distribution": "dated zips 241121 through 260829, 27 systems",
       "inputRows": 3571,
       "newIdentities": 1319,

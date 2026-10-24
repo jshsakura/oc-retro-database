@@ -20,8 +20,9 @@ the mod itself. Arcade short sets retain their namespace as well as their short 
 
 The initial corpus combines curator-provided naming observations with Tentacle Team's XML
 title lists, the sana2dang ES-KoreanLanguage-List snapshot and the kkulleong list packs
-(used with the author's direct permission). The upstream commit, attribution and source
-status are recorded in `sources/`.
+(used with the author's direct permission). Provenance-attributed Korean descriptions live in
+the `datasets/descriptions.jsonl` sidecar keyed by identity id. The upstream commit,
+attribution and source status are recorded in `sources/`.
 No ROM payloads, media, API credentials, user/session records or library inventories are included.
 
 ## Build and resolve
