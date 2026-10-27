@@ -1,0 +1,22 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run test:unit && npm run lint
+      - name: Check the tag matches package.json
+        run: test "v$(node -p 'require("./package.json").version')" = "$GITHUB_REF_NAME"
+      - run: node tools/pack-plugin.mjs --out "$RUNNER_TEMP/pack"
+      - name: Publish the plugin zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" "$RUNNER_TEMP"/pack/oc-retro-db-*.zip --title "$GITHUB_REF_NAME" --notes "CookingFoil plugin. Install it from the plugins page; the data license and credits are inside the zip."

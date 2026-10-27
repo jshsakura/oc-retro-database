@@ -28,13 +28,21 @@ try {
       const latin = splitName(a).en;
       if (latin) collect(titles, JSON.stringify([r.system,keyOf(latin)]), ko);
     }
+    // Row key: the SHA-256 prefix, else the SHA-1 prefix or CRC-32 under a prefix that is never 32 hex.
+    // A CRC or SHA-1 rides along only when the record has exactly one, so a multi-file set never pairs
+    // one file's CRC with another's SHA-256.
+    const seen = { sha256: new Set(), sha1: new Set(), crc32: new Set() };
     for (const fp of r.fingerprints ?? []) {
       if (!ROM_SCOPES.has(fp.scope)) continue;
-      if ((fp.algorithm === "sha256" && /^[0-9a-f]{64}$/i.test(fp.value))
-        || (fp.algorithm === "sha256-prefix128" && /^[0-9a-f]{32}$/i.test(fp.value))) {
-        collect(hashes, JSON.stringify([r.system,fp.value.toLowerCase().slice(0,32)]), [ko,en,"",""]);
-      }
+      const v = String(fp.value).toLowerCase();
+      if ((fp.algorithm === "sha256" && /^[0-9a-f]{64}$/.test(v)) || (fp.algorithm === "sha256-prefix128" && /^[0-9a-f]{32}$/.test(v))) seen.sha256.add(v.slice(0, 32));
+      else if ((fp.algorithm === "sha1" && /^[0-9a-f]{40}$/.test(v)) || (fp.algorithm === "sha1-prefix128" && /^[0-9a-f]{32}$/.test(v))) seen.sha1.add(v.slice(0, 32));
+      else if (fp.algorithm === "crc32" && /^[0-9a-f]{8}$/.test(v)) seen.crc32.add(v);
     }
+    const crc = seen.crc32.size === 1 ? [...seen.crc32][0] : "";
+    const sha1 = seen.sha1.size === 1 ? [...seen.sha1][0] : "";
+    const keys = seen.sha256.size ? [...seen.sha256] : sha1 ? [`sha1:${sha1}`] : crc ? [`crc32:${crc}`] : [];
+    for (const k of keys) collect(hashes, JSON.stringify([r.system, k]), [ko, en, crc, sha1]);
   }
   const output = { source: "oc-retro-database", count: 0, folders: {}, systems: {}, titles: {} };
   let conflicts = 0;

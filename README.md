@@ -90,6 +90,15 @@ hacks, homebrew and bootlegs are excluded from base-title guesses; arcade short 
 own namespace instead of this export. How a consumer displays or integrates the dictionary is
 documented in that consumer's repository (CookingFoil maintains its own server adapter).
 
+Each row is `[ko, en, crc32, sha1-prefix]`, keyed by the SHA-256 prefix, or by `sha1:<prefix>` or
+`crc32:<crc>` when the record has no SHA-256. A CRC-32 or SHA-1 is carried only when the record has
+exactly one, so a multi-file set never pairs one file's CRC with another's SHA-256.
+
+`tools/pack-plugin.mjs --out <dir>` builds the database, exports `names.json` and zips it as a
+CookingFoil plugin (`oc-retro-db-<version>.zip`, provides `names`) together with `CREDITS.md`,
+`LICENSE` and `LICENSE-DATA.md`. Pushing a `v<version>` tag that matches `package.json` publishes
+that zip as a GitHub release.
+
 ## Development
 
 Use synthetic names and disk-backed test scratch space. Branch from `origin/main`, review once,
