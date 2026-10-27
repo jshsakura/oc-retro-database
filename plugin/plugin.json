@@ -1,0 +1,12 @@
+{
+  "id": "oc-retro-db",
+  "apiVersion": 1,
+  "version": "0.0.0",
+  "name": { "en": "OC Retro Database", "ko": "OC 레트로 데이터베이스" },
+  "description": {
+    "en": "Korean names for retro ROMs, matched by content hash (SHA-256, SHA-1, CRC-32) and by title. Data CC BY-NC-SA 4.0: kkulleong (Mupung Cafe, with permission), Tentacle Team (MIT), sana2dang ES-KoreanLanguage-List and contributors, libretro-database (CC BY-SA). See CREDITS.md.",
+    "ko": "레트로 롬의 한국어 이름을 내용 해시(SHA-256, SHA-1, CRC-32)와 제목으로 찾습니다. 데이터 CC BY-NC-SA 4.0: 꿀렁이(무풍카페, 허락받음), 텐타클 팀(MIT), sana2dang ES-KoreanLanguage-List 와 기여자, libretro-database(CC BY-SA). CREDITS.md 를 봅니다."
+  },
+  "provides": ["names"],
+  "libraries": ["retro"]
+}
